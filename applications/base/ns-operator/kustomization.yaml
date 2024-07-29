@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - cluster-role-binding-reconcilier.yaml
+  - cluster-role-binding-josk-crd.yaml
+  - cluster-role-binding-ns-operator.yaml
+  - cluster-role-josk-crd.yaml
+  - cluster-role-reconcilier.yaml
+  - crd.yaml
+  - deployment.yaml
+  - namespace.yaml
+  - sa.yaml
+  - service.yaml

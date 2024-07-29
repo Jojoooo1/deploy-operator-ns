@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ns-operator-parent-app
+  namespace: argocd
+
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+
+spec:
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=false
+      - PrunePropagationPolicy=foreground
+
+    # automated:
+    #   prune: true
+    #   selfHeal: true
+      
+  sources:
+    - repoURL: https://github.com/Jojoooo1/deploy-operator-ns
+      targetRevision: main
+      path: argo-apps/overlays/local
+
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: argocd
