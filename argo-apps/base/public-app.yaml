@@ -32,4 +32,4 @@ spec:
       name: network-policy-public
       namespace: public
       jsonPointers:
-        - /spec/ownerReferences
+        - /metadata/ownerReferences
