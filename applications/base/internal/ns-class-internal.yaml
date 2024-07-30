@@ -6,7 +6,6 @@ metadata:
 spec:
   networkPolicy:
     ingress: "10.0.0.0/16"
-    egress: "10.0.0.0/16"
   
   resourceQuota:
     cpu: "8"
