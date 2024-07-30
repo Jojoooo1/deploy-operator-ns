@@ -26,3 +26,10 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: argocd
+
+  ignoreDifferences:
+    - kind: NetworkPolicy
+      name: network-policy-public
+      namespace: public
+      jsonPointers:
+        - /spec/ownerReferences
