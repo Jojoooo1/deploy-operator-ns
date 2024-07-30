@@ -28,8 +28,7 @@ spec:
     namespace: argocd
 
   ignoreDifferences:
-    - kind: NetworkPolicy
-      name: network-policy-public
+    - kind: ServiceAccount
       namespace: public
       jsonPointers:
         - /metadata/ownerReferences
