@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/version: 1.0.0
     spec:
       containers:
-        - image: docker.io/jojoooo1/ns-operator:1.0.9
+        - image: docker.io/jojoooo1/ns-operator:1.0.10
           imagePullPolicy: Always
           env:
             - name: QUARKUS_OPERATOR_SDK_CRD_APPLY
