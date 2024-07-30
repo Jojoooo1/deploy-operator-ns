@@ -26,9 +26,3 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: argocd
-
-  ignoreDifferences:
-    - kind: ServiceAccount
-      namespace: public
-      jsonPointers:
-        - /metadata/ownerReferences
