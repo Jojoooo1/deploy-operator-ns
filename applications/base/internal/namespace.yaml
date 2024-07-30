@@ -3,5 +3,5 @@ kind: Namespace
 metadata:
   name: internal
   
-  # labels:
-  #   namespaceclass.akuity.io/name: internal-network
+  labels:
+    namespaceclass.akuity.io/name: internal-network
