@@ -4,6 +4,13 @@ metadata:
   name: namespace-reconciler-cluster-role
 rules:
   - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - "*"
+
+  - apiGroups:
       - "akuity.io"
     resources:
       - namespaceclasses
